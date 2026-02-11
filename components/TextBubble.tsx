@@ -11,8 +11,8 @@ const TextBubble: React.FC<TextBubbleProps> = ({
   className = "",
 }) => {
   return (
-    <Card className={`rounded-lg bg-gray-100 p-4 ${className}`}>
-      <p className="text-gray-800">{children}</p>
+    <Card className={`rounded-full ${className}`}>
+      <p className="">{children}</p>
     </Card>
   );
 };

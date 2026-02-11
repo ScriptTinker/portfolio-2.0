@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#jsut for now we gonna ignore images, we can add them back later when we need to
+*.jpeg
+*.jpg
+*.png
+*.svg 
