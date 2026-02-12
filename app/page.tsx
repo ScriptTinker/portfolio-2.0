@@ -2,11 +2,13 @@ import React from "react";
 import TextBubble from "@/components/TextBubble";
 import AvatarBubble from "@/components/AvatarBubble";
 import { HomeCard } from "@/components/Cards";
+import { MainPageBanner } from "@/components/Banners";
+import SkillsAccordation from "@/components/SkillsAccordation";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="mt-8 grid grid-cols-2 gap-4">
+      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="grid place-items-center">
           <AvatarBubble imgSrc="/profile.jpg" alt="Profile" width={300} />
         </div>
@@ -17,7 +19,7 @@ const page = () => {
           </TextBubble>
         </div>
       </div>
-      <div className="mt-8 grid grid-cols-2 justify-items-center gap-4">
+      <div className="mt-8 grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2">
         <div className="max-w-md">
           <HomeCard
             title="Card Title"
@@ -25,15 +27,22 @@ const page = () => {
             buttonText="Learn More"
           />
         </div>
-        <HomeCard
-          title="Card Title"
-          description="Go to da about page to hit me up cuh what's up cuh yuh yuh"
-          buttonText="Learn More"
-        />
-        <div className="max-w-md"></div>
+        <div className="max-w-md">
+          <HomeCard
+            title="Card Title"
+            description="Go to da about page to hit me up cuh what's up cuh yuh yuh"
+            buttonText="Learn More"
+          />
+        </div>
+      </div>
+      <div className="mt-8 grid max-w-md place-items-center">
+        <MainPageBanner>My Current Project:</MainPageBanner>
+      </div>
+      <div className="mt-8 grid place-items-center">
+        <SkillsAccordation />
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

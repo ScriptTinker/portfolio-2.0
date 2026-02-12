@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import Image from "next/image";
 
 interface AvatarBubbleProps {
@@ -16,7 +15,7 @@ const AvatarBubble: React.FC<AvatarBubbleProps> = ({
 }) => {
   return (
     <Image
-      className={"rounded-full border-4 border-white " + className}
+      className={`rounded-full border-4 border-white ${className || ""}`}
       width={width}
       height={width}
       src={imgSrc}
