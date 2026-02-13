@@ -7,63 +7,48 @@ import {
   AccordionTitle,
 } from "flowbite-react";
 
-interface SkillsAccordationProps {}
+interface SkillsAccordationProps {
+  textColor?: string;
+}
 
-const SkillsAccordation: React.FC<SkillsAccordationProps> = () => {
+const SkillsAccordation: React.FC<SkillsAccordationProps> = ({
+  textColor = "text-gray-500 dark:text-gray-400",
+}) => {
   return (
-    <Accordion className="w-full rounded-lg border" alwaysOpen={true}>
-      <AccordionPanel collapseAll={true}>
+    <Accordion className="w-full rounded-lg border">
+      <AccordionPanel>
         <AccordionTitle>My Skills</AccordionTitle>
         <AccordionContent>
-          <Accordion>
+          <Accordion collapseAll={true} className="w-full rounded-lg border">
             <AccordionPanel>
-              <AccordionTitle>My Skills</AccordionTitle>
-              <AccordionContent>
-                <AccordionPanel>
-                  <AccordionTitle>Frontend</AccordionTitle>
-                  <AccordionContent>
-                    <p>React, Next.js, Tailwind CSS, Flowbite</p>
-                  </AccordionContent>
-                </AccordionPanel>
+              <AccordionTitle>Frontend</AccordionTitle>
+              <AccordionContent className="">
+                <p className={textColor}>
+                  React, Next.js, Tailwind CSS, Flowbite
+                </p>
               </AccordionContent>
             </AccordionPanel>
-          </Accordion>
-          <Accordion>
+
             <AccordionPanel>
-              <AccordionTitle>My Skills</AccordionTitle>
+              <AccordionTitle>Backend</AccordionTitle>
               <AccordionContent>
-                <AccordionPanel>
-                  <AccordionTitle>Frontend</AccordionTitle>
-                  <AccordionContent>
-                    <p>React, Next.js, Tailwind CSS, Flowbite</p>
-                  </AccordionContent>
-                </AccordionPanel>
+                <p className={textColor}>
+                  Node.js, Express, MongoDB, PostgreSQL
+                </p>
               </AccordionContent>
             </AccordionPanel>
-          </Accordion>
-          <Accordion>
+
             <AccordionPanel>
-              <AccordionTitle>My Skills</AccordionTitle>
+              <AccordionTitle>DevOps</AccordionTitle>
               <AccordionContent>
-                <AccordionPanel>
-                  <AccordionTitle>Frontend</AccordionTitle>
-                  <AccordionContent>
-                    <p>React, Next.js, Tailwind CSS, Flowbite</p>
-                  </AccordionContent>
-                </AccordionPanel>
+                <p className={textColor}>Docker, Kubernetes, CI/CD, AWS</p>
               </AccordionContent>
             </AccordionPanel>
-          </Accordion>
-          <Accordion>
+
             <AccordionPanel>
-              <AccordionTitle>My Skills</AccordionTitle>
+              <AccordionTitle>Tools & Others</AccordionTitle>
               <AccordionContent>
-                <AccordionPanel>
-                  <AccordionTitle>Frontend</AccordionTitle>
-                  <AccordionContent>
-                    <p>React, Next.js, Tailwind CSS, Flowbite</p>
-                  </AccordionContent>
-                </AccordionPanel>
+                <p className={textColor}>Git, VS Code, Figma, Agile</p>
               </AccordionContent>
             </AccordionPanel>
           </Accordion>

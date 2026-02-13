@@ -7,10 +7,11 @@ import {
   NavbarToggle,
 } from "flowbite-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const NavBar = () => {
   return (
-    <Navbar fluid rounded>
+    <Navbar className="sticky top-0">
       <NavbarToggle />
       <NavbarCollapse>
         <NavbarLink href="#" active>
@@ -24,10 +25,12 @@ const NavBar = () => {
         <NavbarLink href="#">Contact</NavbarLink>
       </NavbarCollapse>
       <NavbarBrand as={Link} href="https://flowbite-react.com">
-        <img
+        <Image
           src="/favicon.svg"
           className="mr-3 h-6 sm:h-9"
           alt="Flowbite React Logo"
+          width={20}
+          height={20}
         />
         <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
           Flowbite React
