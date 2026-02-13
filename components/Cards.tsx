@@ -9,7 +9,7 @@ interface CardProps {
   buttonText: string;
 }
 
-export const HomeCard: React.FC<CardProps> = ({
+export const LinkCard: React.FC<CardProps> = ({
   title,
   description,
   buttonText,
@@ -27,4 +27,8 @@ export const HomeCard: React.FC<CardProps> = ({
       </Button>
     </FlowbiteCard>
   );
+};
+
+export const HeroCard: React.FC<CardProps> = ({ title, description }) => {
+  return "";
 };

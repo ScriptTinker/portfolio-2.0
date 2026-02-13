@@ -11,19 +11,62 @@ interface SkillsAccordationProps {}
 
 const SkillsAccordation: React.FC<SkillsAccordationProps> = () => {
   return (
-    <Accordion>
-      <AccordionPanel alwaysOpen={true}>
+    <Accordion className="w-full rounded-lg border" alwaysOpen={true}>
+      <AccordionPanel collapseAll={true}>
         <AccordionTitle>My Skills</AccordionTitle>
-
         <AccordionContent>
-          <AccordionPanel>
-            <AccordionTitle>Frontend</AccordionTitle>
-            <AccordionContent>
-              <AccordionPanel>
-                <AccordionTitle>React</AccordionTitle>
-              </AccordionPanel>
-            </AccordionContent>
-          </AccordionPanel>
+          <Accordion>
+            <AccordionPanel>
+              <AccordionTitle>My Skills</AccordionTitle>
+              <AccordionContent>
+                <AccordionPanel>
+                  <AccordionTitle>Frontend</AccordionTitle>
+                  <AccordionContent>
+                    <p>React, Next.js, Tailwind CSS, Flowbite</p>
+                  </AccordionContent>
+                </AccordionPanel>
+              </AccordionContent>
+            </AccordionPanel>
+          </Accordion>
+          <Accordion>
+            <AccordionPanel>
+              <AccordionTitle>My Skills</AccordionTitle>
+              <AccordionContent>
+                <AccordionPanel>
+                  <AccordionTitle>Frontend</AccordionTitle>
+                  <AccordionContent>
+                    <p>React, Next.js, Tailwind CSS, Flowbite</p>
+                  </AccordionContent>
+                </AccordionPanel>
+              </AccordionContent>
+            </AccordionPanel>
+          </Accordion>
+          <Accordion>
+            <AccordionPanel>
+              <AccordionTitle>My Skills</AccordionTitle>
+              <AccordionContent>
+                <AccordionPanel>
+                  <AccordionTitle>Frontend</AccordionTitle>
+                  <AccordionContent>
+                    <p>React, Next.js, Tailwind CSS, Flowbite</p>
+                  </AccordionContent>
+                </AccordionPanel>
+              </AccordionContent>
+            </AccordionPanel>
+          </Accordion>
+          <Accordion>
+            <AccordionPanel>
+              <AccordionTitle>My Skills</AccordionTitle>
+              <AccordionContent>
+                <AccordionPanel>
+                  <AccordionTitle>Frontend</AccordionTitle>
+                  <AccordionContent>
+                    <p>React, Next.js, Tailwind CSS, Flowbite</p>
+                  </AccordionContent>
+                </AccordionPanel>
+              </AccordionContent>
+            </AccordionPanel>
+          </Accordion>
         </AccordionContent>
       </AccordionPanel>
     </Accordion>

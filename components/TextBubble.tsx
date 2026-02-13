@@ -1,5 +1,4 @@
 import { Card } from "flowbite-react";
-import { ReactNode } from "react";
 
 interface TextBubbleProps {
   children: React.ReactNode;
@@ -12,7 +11,7 @@ const TextBubble: React.FC<TextBubbleProps> = ({
 }) => {
   return (
     <Card className={`rounded-full ${className}`}>
-      <p className="">{children}</p>
+      <p className="font-normal text-gray-700 dark:text-gray-400">{children}</p>
     </Card>
   );
 };
