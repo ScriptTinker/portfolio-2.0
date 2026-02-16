@@ -1,7 +1,5 @@
-"use client";
-
 import { Card as FlowbiteCard, Button } from "flowbite-react";
-import { HiArrowRight } from "react-icons/hi";
+import { TestButton } from "./Buttons";
 
 interface CardProps {
   title: string;
@@ -22,9 +20,7 @@ export const LinkCard: React.FC<CardProps> = ({
       <p className="font-normal text-gray-700 dark:text-gray-400">
         {description}
       </p>
-      <Button className="mt-4" onClick={() => alert("Button clicked!")}>
-        {buttonText} <HiArrowRight className="ml-2" />
-      </Button>
+      <TestButton text={buttonText} />
     </FlowbiteCard>
   );
 };

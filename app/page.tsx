@@ -3,7 +3,7 @@ import TextBubble from "@/components/TextBubble";
 import AvatarBubble from "@/components/AvatarBubble";
 import { LinkCard } from "@/components/Cards";
 import { MainPageBanner } from "@/components/Banners";
-import SkillsAccordation from "@/components/SkillsAccordation";
+import SkillSection from "@/components/SkillAccordation/SkillSection";
 import { Footer } from "flowbite-react";
 
 const Page = () => {
@@ -40,7 +40,7 @@ const Page = () => {
         <MainPageBanner>My Current Project:</MainPageBanner>
       </div>
       <div className="mt-8 grid place-items-center">
-        <SkillsAccordation />
+        <SkillSection />
       </div>
     </div>
   );
