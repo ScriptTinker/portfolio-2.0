@@ -1,16 +1,16 @@
 import { Card as FlowbiteCard, Button } from "flowbite-react";
-import { TestButton } from "./Buttons";
+import { TestButton, LinkButton } from "./Buttons";
 
 interface CardProps {
   title: string;
   description: string;
-  buttonText: string;
+  buttonLink: string;
 }
 
 export const LinkCard: React.FC<CardProps> = ({
   title,
   description,
-  buttonText,
+  buttonLink,
 }) => {
   return (
     <FlowbiteCard>
@@ -20,7 +20,7 @@ export const LinkCard: React.FC<CardProps> = ({
       <p className="font-normal text-gray-700 dark:text-gray-400">
         {description}
       </p>
-      <TestButton text={buttonText} />
+      <LinkButton href={buttonLink}> See Projects</LinkButton>
     </FlowbiteCard>
   );
 };

@@ -25,14 +25,14 @@ const Page = () => {
           <LinkCard
             title="Card Title"
             description="Go to da projectz page to see my projects cuh see more of this shiiiiiiiii cuhz"
-            buttonText="Learn More"
+            buttonLink="/projects"
           />
         </div>
         <div className="max-w-md">
           <LinkCard
             title="Card Title"
             description="Go to da about page to hit me up cuh what's up cuh yuh yuh"
-            buttonText="Learn More"
+            buttonLink="/about"
           />
         </div>
       </div>
