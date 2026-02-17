@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const NavBar = () => {
   return (
-    <Navbar className="sticky top-0">
+    <Navbar className="sticky top-0 z-50">
       <NavbarToggle />
       <NavbarCollapse>
         <NavbarLink href="#" active>

@@ -11,7 +11,7 @@ const Page = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="grid place-items-center">
-          <AvatarBubble imgSrc="/profile.png" alt="Profile" width={300} />
+          <AvatarBubble imgSrc="/profile.png" alt="Profile" width={600} />
         </div>
         <div className="grid place-items-center">
           <div className="max-w-md">

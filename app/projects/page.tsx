@@ -14,6 +14,7 @@ const ProjectPage = () => {
     { id: 3, text: "Third section text", images: ["img5.jpg", "img6.jpg"] },
   ];
 
+  console.log(process.env.NEXT_PUBLIC_SUPABASE_URL);
   return (
     <div className="container mx-auto px-4 py-8">
       {sections.map((section, index) => (
