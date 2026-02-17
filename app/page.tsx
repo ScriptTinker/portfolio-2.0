@@ -11,13 +11,16 @@ const Page = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="grid place-items-center">
-          <AvatarBubble imgSrc="/profile.jpg" alt="Profile" width={300} />
+          <AvatarBubble imgSrc="/profile.png" alt="Profile" width={300} />
         </div>
         <div className="grid place-items-center">
-          <TextBubble className="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </TextBubble>
+          <div className="max-w-md">
+            <h4 className="mb-2 text-2xl font-bold">Hi there, I'm Edwards!</h4>
+            <h1 className="mb-2 text-3xl font-bold">
+              Full Stack <span className="text-blue-500">Developer</span>
+            </h1>
+            <p> lorem quistat etc etc</p>
+          </div>
         </div>
       </div>
       <div className="mt-8 grid grid-cols-1 justify-items-center gap-4 md:grid-cols-2">

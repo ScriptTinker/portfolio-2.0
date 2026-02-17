@@ -14,13 +14,26 @@ const AvatarBubble: React.FC<AvatarBubbleProps> = ({
   alt,
 }) => {
   return (
-    <Image
-      className={`rounded-full border-4 border-white ${className || ""}`}
-      width={width}
-      height={width}
-      src={imgSrc}
-      alt={alt}
-    ></Image>
+    <div style={{ position: "relative", width: 400, height: 400 }}>
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          clipPath: "path(M public/blob.svg)",
+        }}
+      />
+
+      <Image
+        src={imgSrc}
+        fill
+        alt={alt}
+        className={className}
+        style={{
+          objectFit: "cover",
+          clipPath: "path(M public/blob.svg)",
+        }}
+      />
+    </div>
   );
 };
 
