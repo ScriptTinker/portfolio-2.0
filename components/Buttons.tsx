@@ -7,7 +7,7 @@ import React from "react";
 interface TestButtonProps {
   text?: string;
   children?: React.ReactNode;
-  href: string;
+  href?: string;
 }
 
 export const TestButton: React.FC<TestButtonProps> = ({ text }) => {
@@ -17,6 +17,15 @@ export const TestButton: React.FC<TestButtonProps> = ({ text }) => {
 export const LinkButton: React.FC<TestButtonProps> = ({ href, children }) => {
   return (
     <Button as={Link} href={href as string}>
+      {children}
+    </Button>
+  );
+};
+
+export const LoginButton: React.FC<TestButtonProps> = ({ children }) => {
+  return (
+    <Button>
+      <button type="submit"></button>
       {children}
     </Button>
   );
