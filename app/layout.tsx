@@ -32,11 +32,11 @@ export default function RootLayout({
         <ThemeModeScript />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} dark antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} dark flex min-h-screen flex-col antialiased`}
       >
         <ThemeInit />
         <NavBar />
-        {children}
+        <main className="grow">{children}</main>
         <CustomFooter />
       </body>
     </html>

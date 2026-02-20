@@ -8,6 +8,7 @@ interface TestButtonProps {
   text?: string;
   children?: React.ReactNode;
   href?: string;
+  className?: string;
 }
 
 export const TestButton: React.FC<TestButtonProps> = ({ text }) => {
@@ -22,10 +23,12 @@ export const LinkButton: React.FC<TestButtonProps> = ({ href, children }) => {
   );
 };
 
-export const LoginButton: React.FC<TestButtonProps> = ({ children }) => {
+export const LoginButton: React.FC<TestButtonProps> = ({
+  children,
+  className,
+}) => {
   return (
-    <Button>
-      <button type="submit"></button>
+    <Button type="submit" className={className}>
       {children}
     </Button>
   );
