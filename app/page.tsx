@@ -4,7 +4,6 @@ import AvatarBubble from "@/components/AvatarBubble";
 import { LinkCard } from "@/components/Cards";
 import { MainPageBanner } from "@/components/Banners";
 import SkillSection from "@/components/SkillAccordation/SkillSection";
-import { Footer } from "flowbite-react";
 
 const Page = () => {
   return (
