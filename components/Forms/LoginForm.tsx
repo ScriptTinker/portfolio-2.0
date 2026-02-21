@@ -1,12 +1,16 @@
 "use client";
 
 import { Card, Label, TextInput } from "flowbite-react";
-import { LoginButton } from "./Buttons";
+import { LoginButton } from "../Buttons";
 import { loginHandler } from "@/lib/supabase";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const LoginForm = () => {
+interface LoginFormProps {
+  className?: string;
+}
+
+const LoginForm: React.FC<LoginFormProps> = ({ className }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -23,7 +27,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="">
+    <div className={className}>
       <Card>
         {error && <p className="text-red-500">{error}</p>}
         <form onSubmit={handleSubmit}>

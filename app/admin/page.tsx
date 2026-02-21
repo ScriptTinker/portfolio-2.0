@@ -1,11 +1,16 @@
 import { supabase } from "../../lib/supabase";
+import { LinkButton } from "@/components/Buttons";
 
 const AdminPage = async () => {
   const { data, error } = await supabase.from("projects").select("*");
-  console.log("Data:", data);
-  console.log("Error:", error);
 
-  return <div>check the console for data and error</div>;
+  return (
+    <div className="mt-8 grid">
+      <div className="max-w-md place-items-center">
+        <LinkButton href="/admin/create-project">Create Project</LinkButton>
+      </div>
+    </div>
+  );
 };
 
 export default AdminPage;
